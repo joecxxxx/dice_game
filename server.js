@@ -11,6 +11,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: { origin: '*' }
 });
+app.use(express.static("public"));
 
 app.use(cors());
 app.use(express.json());
